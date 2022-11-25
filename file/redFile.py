@@ -65,6 +65,7 @@ class OpenBrowser(object):
         tables = []
         # 开始爬取数据
 
+
         hostInput = WebDriverWait(self.chrome_obj, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, '.theme-default-content .form-input')))
         sentBtn = WebDriverWait(self.chrome_obj, 10).until(
@@ -98,8 +99,7 @@ class OpenBrowser(object):
         self.chrome_obj.__exit__()
         return tables
 
-    def getDoms(self):
-        print('获取doms')
+
 
 if __name__ == '__main__':
     case = redExcel()
