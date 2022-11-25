@@ -98,6 +98,8 @@ class OpenBrowser(object):
         self.chrome_obj.__exit__()
         return tables
 
+    def getDoms(self):
+        print('获取doms')
 
 if __name__ == '__main__':
     case = redExcel()
