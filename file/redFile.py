@@ -79,6 +79,11 @@ class OpenBrowser(object):
                 EC.presence_of_element_located((By.XPATH, '//*[@id="tfhover"]/tbody/tr[2]/td[2]/span'))).text
             ipv6Stact = WebDriverWait(self.chrome_obj, 2).until(
                 EC.presence_of_element_located((By.XPATH, '//*[@id="tfhover"]/tbody/tr[2]/td[3]/span'))).text
+            HttpsIpv4State=WebDriverWait(self.chrome_obj, 2).until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="tfhover"]/tbody/tr[3]/td[2]/span'))).text
+            HttpsIpv6State = WebDriverWait(self.chrome_obj, 2).until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="tfhover"]/tbody/tr[3]/td[3]/span'))).text
+
 
             if ipv4Stact == '400' or ipv6Stact == '400' or ipv4Stact == '200 请求成功' or ipv6Stact == '200 请求成功':
                 array = {'Host': '', 'Ipv4': '', 'Ipv6': ''}
