@@ -12,6 +12,7 @@ if __name__ == '__main__':
 
     # 进行请求的发送,向网页地址栏填入url参数
     chrome_obj.get('https://www.baidu.com')  # 往浏览器的网页地址栏填入url参数
+    
 
     # 重要:获取当前页面的数据  >>> 是网页源代码 elements      使用selenium做的（json html）
     # data_ = chrome_obj.page_source
